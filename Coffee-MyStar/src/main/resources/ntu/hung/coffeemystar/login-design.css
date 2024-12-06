@@ -2,3 +2,16 @@
 {
     -fx-background-color: linear-gradient(to bottom right, #ffffff, #7b5e2b);
 }
+
+.text-field {
+    -fx-background-color: #fdfdfd;
+    -fx-border-color: #c3b4a4;
+}
+
+.button {
+    -fx-background-color: #7b5e2b;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntu.hung.coffeemystar.LoginController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -34,9 +34,10 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <PasswordField layoutX="40.0" layoutY="184.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" />
-                  <TextField layoutX="40.0" layoutY="132.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" />
-                  <Button layoutX="40.0" layoutY="243.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" text="Login" />
+                  <TextField fx:id="usernameField" layoutX="40.0" layoutY="132.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" />
+                  <PasswordField fx:id="passwordField" layoutX="40.0" layoutY="184.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" />
+                  <Button fx:id="loginButton" layoutX="40.0" layoutY="243.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" text="Login" />
+                  <Button fx:id="registerButton" onAction="#navigateToRegister" layoutX="40.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" text="Register"/>
                </children>
             </AnchorPane>
          </children>
