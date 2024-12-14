@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="980.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntu.hung.coffeemystar.Inventory_Controller">
+    <TableView id="TableView" fx:id="inventoryTable" layoutX="20.0" layoutY="20.0" prefHeight="450.0" prefWidth="940.0">
+        <columns>
+            <TableColumn fx:id="CotID" editable="false" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="CotTenMon" editable="false" text="Tên món" />
+            <TableColumn fx:id="CotGia" editable="false" text="Giá" />
+            <TableColumn fx:id="CotSoLuong" editable="false" text="Số lượng" />
+            <TableColumn fx:id="CotLoai" editable="false" text="Loại" />
+        </columns>
+    </TableView>
+    <TextField fx:id="IDTextField" layoutX="20.0" layoutY="500.0" prefWidth="200.0" promptText="ID (chỉ dùng cập nhật và xóa)">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="TenMonTextField" layoutX="20.0" layoutY="560.0" prefWidth="200.0" promptText="Tên món">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="GiaTextField" layoutX="280.0" layoutY="500.0" prefWidth="100.0" promptText="Giá">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="SoluongTextField" layoutX="280.0" layoutY="560.0" prefWidth="100.0" promptText="Số lượng">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="LoaiTextField" alignment="BOTTOM_LEFT" layoutX="440.0" layoutY="500.0" prefWidth="200.0" promptText="Loại">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </TextField>
+    <Button fx:id="btn_ThemMon" layoutX="440.0" layoutY="560.0" onAction="#addItem" text="Thêm món">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </Button>
+    <Button fx:id="btn_XoaMon" layoutX="570.0" layoutY="560.0" onAction="#deleteItem" text="Xóa món" />
+    <Button fx:id="btn_CapNhat" layoutX="440.0" layoutY="620.0" onAction="#updateItem" text="Cập nhật">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </Button>
+
+</AnchorPane>

@@ -10,7 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class LoginController
+public class Login_Controller
 {
     // Khai báo các trường giao diện (UI components)
     @FXML
@@ -81,9 +81,10 @@ public class LoginController
         try
         {
             // Tải cảnh (Scene) của màn hình chính
-            Parent root = FXMLLoader.load(getClass().getResource("dashboard-view.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("main-view.fxml"));
             Stage stage = (Stage) loginButton.getScene().getWindow();
             stage.setScene(new Scene(root)); // Thiết lập cảnh mới cho cửa sổ
+            stage.centerOnScreen();
         }
         catch (Exception e)
         {
