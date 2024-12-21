@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ntu.hung.coffeemystar.DashboardController"
-            prefHeight="400.0" prefWidth="600.0">
-    <Label fx:id="welcomeLabel"
-           layoutX="50.0"
-           layoutY="50.0"
-           text="Default Text" />
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="ntu.hung.coffeemystar.Dashboard_Controller"
+            prefHeight="720" prefWidth="980">
+    <PieChart fx:id="salesChart" layoutX="50.0" layoutY="50.0" prefWidth="400" prefHeight="400"/>
+
+    <Label fx:id="totalSalesLabel" layoutX="500.0" layoutY="100.0" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <Label fx:id="lowStockLabel" layoutX="500.0" layoutY="150.0" style="-fx-font-size: 14; -fx-font-weight: normal;"/>
 </AnchorPane>

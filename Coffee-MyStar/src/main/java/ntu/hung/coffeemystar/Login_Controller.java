@@ -40,19 +40,18 @@ public class Login_Controller
         // Kiểm tra nếu tên người dùng hoặc mật khẩu trống
         if (username.isEmpty() || password.isEmpty())
         {
-            showAlert("Error", "Username and password cannot be empty!", Alert.AlertType.ERROR); // Hiển thị thông báo lỗi nếu trống
+            showAlert("Lỗi", "Tên đăng nhập và mật khẩu không được trống!", Alert.AlertType.ERROR); // Hiển thị thông báo lỗi nếu trống
             return;
         }
 
         // Kiểm tra thông tin đăng nhập với cơ sở dữ liệu
         if (DatabaseConnection.validateCredentials(username, password))
         {
-            showAlert("Success", "Login successful!", Alert.AlertType.INFORMATION); // Hiển thị thông báo thành công nếu đăng nhập hợp lệ
             navigateToDashboard(); // Chuyển đến màn hình chính (Dashboard)
         }
         else
         {
-            showAlert("Error", "Invalid username or password.", Alert.AlertType.ERROR); // Hiển thị thông báo lỗi nếu thông tin không hợp lệ
+            showAlert("Lỗi", "Không đúng tên đăng nhập hoặc mật khẩu.", Alert.AlertType.ERROR); // Hiển thị thông báo lỗi nếu thông tin không hợp lệ
         }
     }
 
@@ -66,12 +65,12 @@ public class Login_Controller
             Stage stage = (Stage) loginButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("register-view.fxml")); // Tải màn hình đăng ký
             stage.setScene(new Scene(loader.load())); // Thiết lập cảnh đăng ký mới
-            stage.setTitle("Register"); // Đặt tiêu đề cho cửa sổ
+            stage.setTitle("Đăng ký"); // Đặt tiêu đề cho cửa sổ
         }
         catch (Exception e)
         {
             e.printStackTrace(); // In ra thông tin lỗi nếu có lỗi xảy ra
-            showAlert("Error", "Failed to navigate to Register: " + e.getMessage(), Alert.AlertType.ERROR); // Hiển thị lỗi nếu không thể chuyển màn hình
+            showAlert("Lỗi", "Không thể chuyển đến phần đăng kí: " + e.getMessage(), Alert.AlertType.ERROR); // Hiển thị lỗi nếu không thể chuyển màn hình
         }
     }
 
@@ -89,7 +88,7 @@ public class Login_Controller
         catch (Exception e)
         {
             e.printStackTrace(); // In ra thông tin lỗi nếu không thể tải màn hình chính
-            showAlert("Error", "Cannot load dashboard: " + e.getMessage(), Alert.AlertType.ERROR); // Hiển thị lỗi nếu không thể tải màn hình
+            showAlert("Lỗi", "Không thể hiện thị dashboard: " + e.getMessage(), Alert.AlertType.ERROR); // Hiển thị lỗi nếu không thể tải màn hình
         }
     }
 

@@ -9,7 +9,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class RegisterController
+public class Register_Controller
 {
 
     // Khai báo các trường giao diện (UI components)
@@ -45,14 +45,14 @@ public class RegisterController
         // Kiểm tra nếu các trường bị bỏ trống
         if (username.isEmpty() || password.isEmpty() || rePassword.isEmpty())
         {
-            showAlert("Error", "All fields must be filled.", Alert.AlertType.ERROR); // Hiển thị thông báo lỗi nếu có trường trống
+            showAlert("Lỗi", "Tất cả các trường thông tin không được trống.", Alert.AlertType.ERROR); // Hiển thị thông báo lỗi nếu có trường trống
             return;
         }
 
         // Kiểm tra nếu mật khẩu và mật khẩu nhập lại không khớp
         if (!password.equals(rePassword))
         {
-            showAlert("Error", "Passwords do not match.", Alert.AlertType.ERROR); // Hiển thị thông báo lỗi nếu mật khẩu không khớp
+            showAlert("Lỗi", "Mật khẩu không trùng.", Alert.AlertType.ERROR); // Hiển thị thông báo lỗi nếu mật khẩu không khớp
             return;
         }
 
@@ -60,12 +60,12 @@ public class RegisterController
         boolean isRegistered = DatabaseConnection.registerUser(username, password);
         if (isRegistered)
         {
-            showAlert("Success", "User registered successfully!", Alert.AlertType.INFORMATION); // Hiển thị thông báo thành công nếu đăng ký thành công
+            showAlert("Thành công", "Đăng ký thành công!", Alert.AlertType.INFORMATION); // Hiển thị thông báo thành công nếu đăng ký thành công
             navigateToLogin(); // Chuyển đến trang đăng nhập
         }
         else
         {
-            showAlert("Error", "Registration failed. Username might already exist.", Alert.AlertType.ERROR); // Hiển thị thông báo lỗi nếu đăng ký thất bại
+            showAlert("Lỗi", "Đăng ký không thành công.", Alert.AlertType.ERROR); // Hiển thị thông báo lỗi nếu đăng ký thất bại
         }
     }
 
@@ -79,12 +79,12 @@ public class RegisterController
             Stage stage = (Stage) loginPage.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("login-view.fxml")); // Tải màn hình đăng nhập
             stage.setScene(new Scene(loader.load())); // Thiết lập cảnh đăng nhập mới
-            stage.setTitle("Login"); // Đặt tiêu đề cho cửa sổ
+            stage.setTitle("Đăng nhập"); // Đặt tiêu đề cho cửa sổ
         }
         catch (Exception e)
         {
             e.printStackTrace(); // In ra thông tin lỗi nếu có lỗi xảy ra
-            showAlert("Error", "Failed to navigate to Login: " + e.getMessage(), Alert.AlertType.ERROR); // Hiển thị lỗi nếu không thể chuyển màn hình
+            showAlert("Lỗi", "Không thể chuyển đến đăng nhập: " + e.getMessage(), Alert.AlertType.ERROR); // Hiển thị lỗi nếu không thể chuyển màn hình
         }
     }
 

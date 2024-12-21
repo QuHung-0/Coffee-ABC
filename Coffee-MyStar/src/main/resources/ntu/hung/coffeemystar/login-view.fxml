@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntu.hung.coffeemystar.Login_Controller">
+<StackPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntu.hung.coffeemystar.Login_Controller" stylesheets="@login-design.css">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="gradient" stylesheets="@login-design.css">
+            <AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="gradient" >
                <children>
                   <ImageView fitHeight="200.0" fitWidth="220.0" layoutX="40.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -27,17 +27,17 @@
                      </font>
                   </Label>
                </children></AnchorPane>
-            <AnchorPane layoutX="300.0" prefHeight="400.0" prefWidth="300.0">
+            <AnchorPane layoutX="300.0" prefHeight="400.0" prefWidth="300.0" >
                <children>
-                  <Label layoutX="40.0" layoutY="47.0" text="Login Account" textFill="#7b5e2b">
+                  <Label layoutX="40.0" layoutY="47.0" text="Đăng nhập tài khoản" textFill="#7b5e2b">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="usernameField" layoutX="40.0" layoutY="132.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" text="testuser" />
-                  <PasswordField fx:id="passwordField" layoutX="40.0" layoutY="184.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" text="test" />
-                  <Button fx:id="loginButton" layoutX="40.0" layoutY="243.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" text="Login" />
-                  <Button fx:id="registerButton" layoutX="40.0" layoutY="300.0" mnemonicParsing="false" onAction="#navigateToRegister" prefHeight="40.0" prefWidth="220.0" text="Register" />
+                  <TextField fx:id="usernameField" layoutX="40.0" layoutY="132.0" prefHeight="30.0" prefWidth="220.0" promptText="Tên tài khoản" text="testuser" />
+                  <PasswordField fx:id="passwordField" layoutX="40.0" layoutY="184.0" prefHeight="30.0" prefWidth="220.0" promptText="Mật khẩu" text="test" />
+                  <Button fx:id="loginButton" layoutX="40.0" layoutY="243.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" text="Đăng nhập" />
+                  <Button fx:id="registerButton" layoutX="40.0" layoutY="300.0" mnemonicParsing="false" onAction="#navigateToRegister" prefHeight="40.0" prefWidth="220.0" text="Đăng ký" />
                </children>
             </AnchorPane>
          </children>

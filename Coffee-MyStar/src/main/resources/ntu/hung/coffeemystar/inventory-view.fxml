@@ -7,8 +7,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="980.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntu.hung.coffeemystar.Inventory_Controller">
-    <TableView id="TableView" fx:id="inventoryTable" layoutX="20.0" layoutY="20.0" prefHeight="450.0" prefWidth="940.0">
+<AnchorPane prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntu.hung.coffeemystar.Inventory_Controller" stylesheets="@login-design.css">
+    <TableView fx:id="inventoryTable" layoutX="20.0" layoutY="20.0" prefHeight="450.0" prefWidth="940.0">
         <columns>
             <TableColumn fx:id="CotID" editable="false" prefWidth="75.0" text="ID" />
             <TableColumn fx:id="CotTenMon" editable="false" text="Tên món" />
@@ -16,6 +16,9 @@
             <TableColumn fx:id="CotSoLuong" editable="false" text="Số lượng" />
             <TableColumn fx:id="CotLoai" editable="false" text="Loại" />
         </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
     </TableView>
     <TextField fx:id="IDTextField" layoutX="20.0" layoutY="500.0" prefWidth="200.0" promptText="ID (chỉ dùng cập nhật và xóa)">
         <font>
